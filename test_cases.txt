@@ -1,0 +1,23 @@
+==========================================================================
+  SEMESTER 1 BCA - PYTHON PROJECT VALIDATION & UNIT TEST REPORT
+  System: Student Registration & Contact Intelligence Engine
+==========================================================================
+Test ID  | Field    | Test Scenario / Input                      | Expected | Result | Diagnostic Message
+---------------------------------------------------------------------------------------------------------
+TC-01    | Name     | (Aarav Shar, 9876543210, aarav@gmail.com)  | True     | PASS   | Valid
+TC-02    | Name     | (, 9876543210, aarav@gmail.com)            | False    | PASS   | Student name is missing/blank
+TC-03    | Name     | (   , 9876543210, aarav@gmail.com)         | False    | PASS   | Student name is missing/blank
+TC-04    | Phone    | (Rahul Das, , rahul@college.e)             | False    | PASS   | Phone number is missing/empty
+TC-05    | Phone    | (Ananya Sen, 5551234567, ananya@gmail.co)  | False    | PASS   | Invalid phone prefix '5' (must start with 6, 7, 8, or 9)
+TC-06    | Phone    | (John Doe, 987654321, john@gmail.com)      | False    | PASS   | Invalid phone format '987654321' (must be exactly 10 digits)
+TC-07    | Phone    | (Jane Doe, 98765432100, jane@gmail.com)    | False    | PASS   | Invalid phone format '98765432100' (must be exactly 10 digits)
+TC-08    | Phone    | (Mark Smith, 987654321a, mark@gmail.com)   | False    | PASS   | Invalid phone format '987654321a' (must be exactly 10 digits)
+TC-09    | Email    | (Siddharth , 9112233445, siddharth.rao@)   | False    | PASS   | Email domain after '@' is missing
+TC-10    | Email    | (Arjun Kapo, 9876501234, arjun@kapoor)     | False    | PASS   | Email domain part must contain a '.' character
+TC-11    | Email    | (Vikram Sin, 9898989898, vikram@@gmail.c)  | False    | PASS   | Email must contain exactly one '@' character
+TC-12    | Email    | (Aditya Jos, 7890123456, aditya joshi@gm)  | False    | PASS   | Email contains invalid whitespace
+TC-13    | Email    | (Test User, 9876543210, user@.gmail.com)   | False    | PASS   | Email domain cannot start or end with a '.' period
+TC-14    | Email    | (Test User2, 9876543210, user@gmail.)      | False    | PASS   | Email domain cannot start or end with a '.' period
+---------------------------------------------------------------------------------------------------------
+TOTAL TEST SUITE SUMMARY: 14/14 TEST CASES PASSED SUCCESSFULLY (100% ACCURACY).
+==========================================================================
