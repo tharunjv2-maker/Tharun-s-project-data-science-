@@ -96,25 +96,3 @@ Data Quality Accuracy    : 65.0%
 
 ---
 
-## 🎓 Key Viva Voce Concepts & Answers
-
-1. **Why store phone numbers as `str` instead of `int`?**
-   * Storing phone numbers as strings preserves leading zeroes, allows direct `.isdigit()` and `len()` string validations, and prevents accidental arithmetic operations.
-
-2. **Why use `csv.DictReader` over `csv.reader`?**
-   * `DictReader` maps CSV rows to Python dictionaries using header column names as keys, making the code clean, robust, and readable compared to rigid numeric index lookups.
-
-3. **How do Python sets achieve $O(1)$ duplicate checking?**
-   * Sets use internal hash tables. Key lookups in sets take $O(1)$ constant time on average, regardless of whether the dataset has 10 or 10,000 records.
-
-4. **Why modularize validation into `validator.py`?**
-   * Modularization separates validation rules from file input/output logic, allowing independent testing, reuse across CLI/GUI/API interfaces, and easier maintenance.
-
----
-
-## 📋 Evaluation Checklist Verification
-- [x] **Modular Python Code:** Clean modules (`validator.py`, `loader.py`, `analytics.py`, `main.py`).
-- [x] **Input CSV:** `contacts.csv` included and properly ingested.
-- [x] **BI Analytics:** Accuracy rate, telecom distribution, and domain ranks calculated cleanly.
-- [x] **Testing Evidence:** `proof/console_output.txt` and `proof/test_cases.txt` generated.
-- [x] **Documentation:** Detailed README.md provided for review.
